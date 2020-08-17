@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FindRestaurantsApp.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Fill" BackgroundColor="#2C2C2C" >
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Frame CornerRadius="10" BorderColor="White" BackgroundColor="Black" Margin="20, 0, 20, 0" >
+                    <Entry Text="{Binding Username}" Placeholder="Username" TextColor="White" BackgroundColor="Black" PlaceholderColor="WhiteSmoke"/>
+                </Frame>
+                <Frame CornerRadius="10" Margin="20, 0, 20, 0"
+                       BorderColor="White" BackgroundColor="Black">
+                    <Entry Text="{Binding Password}" IsPassword="true" Placeholder="Password" TextColor="White" BackgroundColor="Black" PlaceholderColor="WhiteSmoke"/>
+                </Frame>
+                <Button Text="Log In" Command="{Binding LogInCommand}"
+                        BackgroundColor="White" Margin="20, 0, 20, 0"
+                        TextColor="Black" CornerRadius="10"/>
+                <Label Text="Log in failed" 
+                       TextColor="Red" 
+                       IsVisible="{Binding WrongCredentials}" 
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+        <Button Text="Don't have an account? Sign up" 
+                    Command="{Binding SignUpCommand}"
+                    BackgroundColor="#2C2C2C" 
+                    TextColor="WhiteSmoke"
+                    VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

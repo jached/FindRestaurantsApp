@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FindRestaurantsApp.Views.SignUpPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#2C2C2C" VerticalOptions="CenterAndExpand" >
+            <Frame CornerRadius="10" BorderColor="White" Margin="20, 0, 20, 0" BackgroundColor="Black">
+                <Entry Placeholder="Username" Text="{Binding Username}" TextColor="White" PlaceholderColor="WhiteSmoke"/>
+            </Frame>
+            <Frame CornerRadius="10" Margin="20, 0, 20, 0"
+                   BorderColor="White" BackgroundColor="Black">
+                <Entry IsPassword="true" TextColor="White" Placeholder="Password" Text="{Binding Password}" PlaceholderColor="WhiteSmoke"/>
+            </Frame>
+            <Button Text="Sign Up" Command="{Binding SignUpCommand}"
+                    BackgroundColor="White" Margin="20, 10, 20, 0"
+                    TextColor="Black" CornerRadius="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

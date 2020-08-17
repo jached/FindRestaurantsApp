@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FindRestaurantsApp.Views.Cells.MyRestaurantsCell">
+    <ViewCell.View>
+        <Frame CornerRadius="10" Margin="10" BackgroundColor="Black" BorderColor="WhiteSmoke">
+            <StackLayout BackgroundColor="Black" Orientation="Horizontal">
+                <StackLayout BackgroundColor="Black">
+                    <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="{Binding Address}" TextColor="WhiteSmoke"/>
+                </StackLayout>
+            <Button Text="X" Clicked="Remove_Clicked" BackgroundColor="Red" TextColor="White" HorizontalOptions="EndAndExpand" HeightRequest="20" WidthRequest="50"/>
+            </StackLayout>
+        </Frame>
+    </ViewCell.View>
+</ViewCell>
